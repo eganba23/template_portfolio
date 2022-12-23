@@ -6,6 +6,13 @@ title: "Portfolio 1"
 
 ```{r load-packages, message=FALSE}
 library(tidyverse) 
-library(datasauRus)
+library(tidyr)
 ```
 
+```{r}
+# Create a barplot of the number of fish encounters by species
+ggplot(data = fish_encounters, aes(x = species, y = count)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Species", y = "Number of Fish Encounters")
+  
+```
